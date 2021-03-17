@@ -30,4 +30,4 @@ class MainApp(App):
         rovnase_btn.bind(on_press=self.on_solution)
         main_layout.add_widget(rovnase_btn)
 
-        return main_layout
+        return main_layou
