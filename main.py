@@ -5,6 +5,24 @@ from kivy.uix.textinput import TextInput
 
 
 class MainApp(App):
+
+    def on_button_press(self, instance):
+        current = self.solution.text
+        button_text = instance.text
+
+        if button_text == "C":
+            self.solution.text = ""
+        else:
+            if current and (self.posledni_operace and button_text in self.operace):
+                return
+            elif current == "" and button_text in self.operace:
+                return
+            else:
+                new_text = current + button_text
+                self.solution.text = new_text
+        self.last_button = button_text
+        self.posledni_operace = self.last_button in self.operace
+
     def build(self):
         self.operace = ["/", "*", "+", "-"]
         self.posledni_operace = None
