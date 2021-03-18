@@ -55,3 +55,8 @@ class MainApp(App):
         main_layout.add_widget(rovnase_btn)
 
         return main_layout
+
+
+if __name__ == "__main__":
+    app = MainApp()
+    app.run()
