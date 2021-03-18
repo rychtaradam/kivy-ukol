@@ -34,7 +34,7 @@ class MainApp(App):
         self.posledni_operace = None
         self.posledni_tlacitko = None
         main_layout = BoxLayout(orientation="vertical")
-        self.solution = TextInput(multiline=False, readonly=True, haling="right", font_size=55)
+        self.solution = TextInput(multiline=False, readonly=True, halign="right", font_size=55)
         main_layout.add_widget(self.solution)
         buttons = [
             ["7", "8", "9", "/"],
